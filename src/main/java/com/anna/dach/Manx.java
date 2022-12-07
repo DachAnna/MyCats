@@ -1,8 +1,6 @@
 package com.anna.dach;
 
-final class Manx extends Cats {
-
-    final String breed = "Мэнкс";
+public final class Manx extends Cats {
 
     public Manx(String name, int age, boolean lengthTail, boolean fluffy) {
         super(name, age, lengthTail, fluffy);
@@ -10,6 +8,7 @@ final class Manx extends Cats {
 
     @Override
     public String getDescription() {
-        return "Привет! Мне " + getAge() + " " + getAgeWithDeclination() + ". Я кошка породы " + breed;
+        String breed = "Мэнкс";
+        return "Привет! Мне " + age + " " + getAgeWithDeclination() + ". Я кошка породы " + breed;
     }
 }

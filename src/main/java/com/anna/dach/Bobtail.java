@@ -1,8 +1,6 @@
 package com.anna.dach;
 
-final class Bobtail extends Cats {
-
-    final String breed = "Бобтэйл";
+public final class Bobtail extends Cats {
 
     public Bobtail(String name, int age, boolean lengthTail, boolean fluffy) {
         super(name, age, lengthTail, fluffy);
@@ -10,6 +8,7 @@ final class Bobtail extends Cats {
 
     @Override
     public String getDescription() {
-        return "Привет! Мне " + getAge() + " " + getAgeWithDeclination() + ". Я кошка породы " + breed;
+        String breed = "Бобтэйл";
+        return "Привет! Мне " + age + " " + getAgeWithDeclination() + ". Я кошка породы " + breed;
     }
 }

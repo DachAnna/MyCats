@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public abstract class Cats {
 
-    private String name;
-    private int age;
-    final boolean lengthTail;
-    final boolean fluffy;
+    private final String name;
+    protected final int age;
+    protected final boolean lengthTail;
+    protected final boolean fluffy;
 
     public Cats(String name, int age, boolean lengthTail, boolean fluffy) {
         this.name = name;
@@ -22,10 +22,6 @@ public abstract class Cats {
 
     public String getName() {
         return this.name;
-    }
-
-    public int getAge() {
-        return this.age;
     }
 
     //Склонение окончания по возрасту (год/года/лет)
@@ -49,7 +45,7 @@ public abstract class Cats {
 
     public abstract String getDescription();
 
-    static void welcomeMessage(Cats[] cats) {
+    public static void welcomeMessage(Cats[] cats) {
         System.out.println("Пришло время выбрать кошку:");
         System.out.println(Arrays.toString(cats));
     }

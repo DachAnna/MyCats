@@ -1,10 +1,10 @@
-package com.simbirsoft;
+package com.anna.dach;
 
 import java.util.Scanner;
 
 public class InputName {
 
-    public static int inputName (Cats[] cats) {
+    public static int inputName(Cats[] cats) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя кошки, чтобы познакомиться с ней поближе:");
         String choose = scanner.nextLine();

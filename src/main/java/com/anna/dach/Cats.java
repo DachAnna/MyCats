@@ -1,12 +1,13 @@
-package com.simbirsoft;
+package com.anna.dach;
 
-public class Cats {
+import java.util.Arrays;
 
-    String name;
-    int age;
-    boolean lengthTail;
-    boolean fluffy;
-    String[] breed = {"Бирма", "Бобтейл", "Мэнкс", "Абисс"};
+public abstract class Cats {
+
+    private String name;
+    private int age;
+    final boolean lengthTail;
+    final boolean fluffy;
 
     public Cats(String name, int age, boolean lengthTail, boolean fluffy) {
         this.name = name;
@@ -21,6 +22,10 @@ public class Cats {
 
     public String getName() {
         return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
     }
 
     //Склонение окончания по возрасту (год/года/лет)
@@ -42,19 +47,10 @@ public class Cats {
         return years;
     }
 
-    public String getBreed() {
-        if (this.lengthTail && this.fluffy) {
-            return breed[0];
-        } else if (this.lengthTail && !this.fluffy) {
-            return breed[3];
-        } else if (!this.lengthTail && this.fluffy) {
-            return breed[1];
-        } else {
-            return breed[2];
-        }
-    }
+    public abstract String getDescription();
 
-    public String getDescription() {
-        return "Привет! Мне " + this.age + " " + getAgeWithDeclination() + ". Я кошка породы " + getBreed();
+    static void welcomeMessage(Cats[] cats) {
+        System.out.println("Пришло время выбрать кошку:");
+        System.out.println(Arrays.toString(cats));
     }
 }

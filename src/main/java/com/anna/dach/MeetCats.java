@@ -1,6 +1,6 @@
 package com.anna.dach;
 
-public class MeetCarts {
+public class MeetCats {
 
     public static void main(String[] args) {
         Cats barsik = new Burma("Барсик", 1, true,true);

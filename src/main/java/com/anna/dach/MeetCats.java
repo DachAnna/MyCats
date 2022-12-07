@@ -9,11 +9,8 @@ public class MeetCats {
         Cats happy = new Abyss("Хэппи", 3, true, false);
 
         Cats[] cats= {barsik, murka, sherlock, happy};
-
         Cats.welcomeMessage(cats);
-
         int cat = InputName.inputName(cats);
-
         if(cat >= 0) {
             System.out.println(cats[cat].getDescription());
         }
